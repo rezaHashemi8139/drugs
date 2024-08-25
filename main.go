@@ -31,7 +31,7 @@ func main() {
 	e := echo.New()
 	e.GET("/show", show)
 	e.GET("/", getHome)
-	e.GET("/users/:id", user.GetUser)
-	e.POST("/users", user.CreateUser)
+	e.GET("/user/:id", user.GetUser)
+	e.POST("/user", user.CreateUser)
 	e.Logger.Fatal(e.Start(":8080"))
 }
